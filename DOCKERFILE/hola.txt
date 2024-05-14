@@ -1,1 +1,2 @@
-
+Usar en otra consola el comando "docker exec -it <container_id> curl http://localhost:5000"
+Esto debe permitir probar la conectividad dentro del contenedor sin problemas.
