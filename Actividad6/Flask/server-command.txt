@@ -1,0 +1,2 @@
+Puedes probar el endpoint usando curl o tu navegador
+curl "http://localhost:5001/api/square?number=4"
