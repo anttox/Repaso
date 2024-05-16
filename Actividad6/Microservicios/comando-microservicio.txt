@@ -1,0 +1,7 @@
+Instalar Flask y Requests:
+pip install flask requests
+
+Ejecutamos los servicios con python3 primero el servicio1 y luego el servicio2
+
+uso de curl para hacer comunicacion:
+curl http://localhost:5001/square
