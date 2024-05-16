@@ -1,6 +1,6 @@
 import concurrent.futures
 
-def add_number(number):
+def sum_number(number):
     print(f'Process {number}')
     return number
 
