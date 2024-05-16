@@ -1,1 +1,50 @@
+1. CPU Utilization with Flags -l 5:100,5:100
+comando: python3 process-run.py -l 5:100,5:100 -c -P
+Explicación:
+-l 5:100,5:100: Este flag especifica dos procesos, cada uno con 5 instrucciones, todas usando la CPU.
+CPU Utilization: Dado que ambos procesos usan completamente la CPU durante 5 ticks cada uno, la utilización de la CPU debería ser del 100%.
+Resultado Esperado:
+Tiempo Total: 10 ticks (5 ticks por cada proceso).
+CPU Ocupada: 10 ticks (100% de utilización de la CPU).
 
+2. Completion Time with Flags -l 4:100,1:0
+comando: python3 process-run.py -l 4:100,1:0 -c -P
+Explicación:
+-l 4:100,1:0: Este flag especifica dos procesos. El primero tiene 4 instrucciones usando la CPU y el segundo emite una operación de I/O y espera a que se complete.
+Tiempo de Finalización:
+El primer proceso (4 instrucciones CPU) toma 4 ticks.
+El segundo proceso emite una I/O y espera 5 ticks (por defecto).
+Resultado Esperado:
+Tiempo Total: 5 ticks (el tiempo máximo entre el proceso de CPU y el de I/O).
+CPU Ocupada: 4 ticks (utilización del 80% de la CPU).
+
+3. Switching the Order: Flags -l 1:0,4:100
+comando: python3 process-run.py -l 1:0,4:100 -c -P
+Explicación:
+-l 1:0,4:100: Este flag especifica dos procesos. El primero emite una operación de I/O y el segundo tiene 4 instrucciones usando la CPU.
+Orden de Ejecución:
+El primer proceso emite una I/O y espera 5 ticks.
+El segundo proceso usa la CPU durante 4 ticks.
+Resultado Esperado:
+Tiempo Total: 9 ticks (5 ticks de I/O + 4 ticks de CPU).
+CPU Ocupada: 4 ticks (utilización del 44.44% de la CPU).
+
+4. Using Flag -S SWITCH ON END
+comando: python3 process-run.py -l 1:0,4:100 -c -S SWITCH ON END -P
+Explicación:
+-S SWITCH ON END: El sistema no cambia a otro proceso mientras uno está haciendo I/O, esperando hasta que el proceso termine completamente.
+Resultado: El proceso de I/O se ejecuta durante 5 ticks y luego el proceso de CPU se ejecuta durante 4 ticks.
+Resultado Esperado:
+Tiempo Total: 9 ticks.
+CPU Ocupada: 4 ticks (utilización del 44.44% de la CPU).
+
+5. Using Flag -S SWITCH ON IO
+comando: python3 process-run.py -l 1:0,4:100 -c -S SWITCH ON IO -P
+Explicación:
+-S SWITCH ON IO: El sistema cambia a otro proceso cuando uno está esperando por I/O.
+Resultado: El proceso de I/O se ejecuta primero, el sistema cambia al proceso de CPU, y ambos se ejecutan concurrentemente.
+Resultado Esperado:
+Tiempo Total: 5 ticks.
+CPU Ocupada: 4 ticks (utilización del 80% de la CPU).
+
+6. Using Flag -I IO RUN LATER
