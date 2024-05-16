@@ -1,0 +1,10 @@
+Distribución de tareas:
+El modelo MapReduce permite dividir una gran tarea en subtareas más pequeñas que pueden ser procesadas en paralelo. Esto maximiza el uso de recursos de CPU y reduce el tiempo total de procesamiento.
+
+Escalabilidad:
+MapReduce es altamente escalable. Puede trabajar eficientemente en un solo equipo con múltiples núcleos de CPU o en un clúster de computadoras, gestionando grandes volúmenes de datos.
+
+Tolerancia a fallos:
+MapReduce maneja automáticamente la recuperación de fallos de nodos en un clúster, reasignando tareas a otros nodos disponibles, lo que garantiza la robustez del procesamiento de datos.
+
+
