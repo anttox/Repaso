@@ -1,1 +1,9 @@
-
+Importante crear tambien tu repositorio de trbajo en linux con la terminal
+1. Crear repositorio en github
+2. Generar token-clave Perfil -> Settings -> Developer Settings -> Personal Access Token -> Tokens classic (paso importante para poder hacer push)
+3. Poner los archivos que subiremos a nuestro repo en un repo del terminal de linux
+4. usar git init
+5. git remote add origin <link del repo creado>
+6. git add . o git add para hacer seguimiento a los archivos
+7. git commit -m <texto o comentario para el commit>
+8. git push origin master (pediran usuario y contraseña(access-token))
