@@ -1,0 +1,7 @@
+Simplicidad y legibilidad: concurrent.futures proporciona una interfaz de alto nivel para ejecutar llamadas de forma asincrónica. Esto hace que el código sea más fácil de escribir, leer y mantener en comparación con manejar directamente los hilos (threads).
+
+Gestión eficiente de recursos: Usar ThreadPoolExecutor permite manejar un grupo de hilos reutilizables que pueden ejecutar tareas de forma concurrente. Esto evita la sobrecarga de crear y destruir hilos constantemente y optimiza el uso de recursos del sistema.
+
+Mejor rendimiento en operaciones I/O-bound: Para tareas que involucran operaciones de entrada/salida (I/O) como leer/escribir archivos o hacer solicitudes de red, ThreadPoolExecutor puede mejorar significativamente el rendimiento al permitir que múltiples tareas se realicen en paralelo, aprovechando el tiempo de espera de I/O.
+
+Escalabilidad: Al usar un pool de hilos, se puede escalar fácilmente la aplicación para manejar un mayor número de tareas concurrentes, lo que es crucial en aplicaciones de alto rendimiento y sistemas distribuidos.
