@@ -1,0 +1,9 @@
+Mejor uso de los recursos del sistema: multiprocessing permite que una aplicación aproveche múltiples núcleos de CPU, lo que puede mejorar significativamente el rendimiento de aplicaciones que realizan tareas computacionalmente intensivas.
+
+Aislamiento de procesos: Cada proceso tiene su propio espacio de memoria, lo que reduce el riesgo de conflictos de datos y facilita la gestión de errores. Esto es especialmente útil cuando se trabaja con grandes volúmenes de datos o cuando se realizan cálculos complejos.
+
+Escalabilidad: Permite que una aplicación escale y maneje más tareas concurrentemente. Esto es crucial para el procesamiento de grandes volúmenes de datos en aplicaciones de análisis de datos y aprendizaje automático.
+
+Concurrente con I/O: A diferencia de los hilos, que pueden estar limitados por el GIL (Global Interpreter Lock) de Python, los procesos pueden ejecutarse verdaderamente en paralelo, incluso en operaciones que implican I/O.
+
+El uso de concurrent.futures.ProcessPoolExecutor facilita la ejecución y gestión de múltiples procesos, proporcionando una interfaz de alto nivel que simplifica el código y mejora la legibilidad.
