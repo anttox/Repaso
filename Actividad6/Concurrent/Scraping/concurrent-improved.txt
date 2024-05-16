@@ -1,0 +1,6 @@
+En el codigo de scraping.py se hace se quiere encontrar tags <h1> pero no todas las paginas presentan este dato, podemos ver otro enfoque buscndo otros elementos.
+Esto puede deberse a varias razones, como el hecho de que las páginas web utilizan otros elementos para los títulos principales o que el contenido está cargado dinámicamente mediante JavaScript, lo cual no se captura en una solicitud HTTP simple.
+Para manejar mejor estos casos, puedes intentar buscar otros elementos que comúnmente contienen títulos de páginas, como <title> o diferentes tags de encabezado como <h2>, <h3>, etc.
+
+
+
