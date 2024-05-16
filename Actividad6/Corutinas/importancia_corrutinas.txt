@@ -1,0 +1,11 @@
+Eficiencia en el manejo de estados:
+Las corutinas permiten mantener y continuar el estado de la ejecución sin necesidad de un bucle o variable externa para gestionar la secuencia. Esto facilita la implementación de generadores de secuencias complejas como números primos.
+
+Interactividad:
+Las corutinas pueden recibir datos en tiempo de ejecución mediante el método send(), lo que permite modificar el comportamiento del generador sobre la marcha. Esto es particularmente útil para tareas que requieren ajustes dinámicos.
+
+Control de flujo:
+Las corutinas permiten pausar y reanudar la ejecución, proporcionando un control fino sobre el flujo del programa. Esto es útil para la programación asíncrona y en situaciones donde se necesita gestionar múltiples tareas concurrentemente.
+
+Menor uso de memoria:
+A diferencia de las funciones tradicionales que devuelven grandes conjuntos de datos de una vez, las corutinas pueden generar datos de uno en uno y bajo demanda, lo que reduce el uso de memoria.
