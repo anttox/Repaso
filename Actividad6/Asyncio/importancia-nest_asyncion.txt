@@ -1,0 +1,10 @@
+¿Por qué es importante usar nest_asyncio?
+Ejecutar código asincrónico en un entorno interactivo:
+En entornos como Jupyter Notebooks, ya hay un bucle de eventos en ejecución. Intentar usar asyncio.run() directamente en un notebook resultará en un error porque no se puede crear un nuevo bucle de eventos dentro de uno ya existente.
+
+Evitemos errores de bucle de eventos:
+Si intentas ejecutar asyncio.run() cuando ya hay un bucle de eventos corriendo, recibirás un error como RuntimeError: This event loop is already running. nest_asyncio permite evitar este error aplicando un parche que permite anidar bucles de eventos.
+
+¿Cuándo no es necesario nest_asyncio?
+En un script estándar de Python que no se ejecute en un entorno interactivo como Jupyter Notebook, normalmente no necesitarás nest_asyncio. Solo usarías asyncio.run(main()) directamente.
+
