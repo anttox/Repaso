@@ -1,4 +1,5 @@
 Instalar Flask y Requests:
+pip install flask
 pip install flask requests
 
 Ejecutamos los servicios con python3 primero el servicio1 y luego el servicio2
