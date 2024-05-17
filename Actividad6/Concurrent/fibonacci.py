@@ -1,4 +1,7 @@
 #Programacion distribuida
+#En este contexto, zip(nums, results) se usa para emparejar cada número en nums con su resultado correspondiente en results. 
+#De esta forma, se puede iterar simultáneamente sobre ambas listas y obtener cada número junto con su respectivo resultado 
+#de la serie de Fibonacci.
 import concurrent.futures
 
 def fibonacci(n):
