@@ -1,0 +1,15 @@
+1. Control de Memoria:
+- Eficiencia de Memoria: Manejar archivos en chunks ayuda a evitar el uso excesivo de memoria. En lugar de cargar un archivo grande entero en memoria, se carga y procesa en partes más pequeñas.
+- Evitar Sobrecarga: Procesar archivos en chunks minimiza el riesgo de sobrecargar la memoria del sistema, lo que podría llevar a fallos en el programa o al sistema volviéndose inestable.
+
+2. Optimización del Rendimiento:
+- Paralelismo: Trabajar con chunks permite procesar diferentes partes de un archivo de manera concurrente, aprovechando mejor los recursos del sistema y reduciendo el tiempo total de procesamiento.
+- Reducción de Latencia: Al procesar y enviar chunks tan pronto como están disponibles, se puede reducir la latencia total, especialmente en redes lentas o inestables.
+
+3. Manejo de Errores:
+- Resiliencia: Si ocurre un error durante el procesamiento o descarga de un chunk, solo ese trozo necesita ser reintentado, en lugar de tener que reiniciar todo el proceso desde el principio.
+- Recuperación: Facilita la implementación de estrategias de recuperación y reintento en caso de fallos parciales.
+
+4. Compatibilidad con Protocolos y APIs:
+- Requisitos del Protocolo: Algunos protocolos y APIs, especialmente aquellos utilizados para transmisión de datos, están diseñados para trabajar de manera más eficiente con datos enviados en chunks.
+- Limitaciones de Red: En redes con limitaciones de ancho de banda o alta latencia, enviar datos en chunks más pequeños puede mejorar el rendimiento general.
