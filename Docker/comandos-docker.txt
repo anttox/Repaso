@@ -32,4 +32,37 @@ El comando docker run se usa para ejecutar un contenedor basado en la imagen cre
 El comando docker push se usa para subir la imagen a un registro de contenedores.
 * docker push mi-usuario/mi-app-imagen:1.0
 
+10. Eliminar contenedores
+Eliminar un contenedor en específico:
+* docker rm <contenedor_id>, "para ver el id usa ps o ps -a"
+Eliminar todos los contenedores detenidos:
+* docker container prune
+Forzar la eliminación de un contenedor en ejecución:
+* docker rm -f <contenedor_id>, usamos "-f" para forzar la eliminación
+
+11. Eliminar imágenes
+Eliminar una imagen específica:
+* docker rmi <imagen_id>, para ver las imagenes usa "docker images"
+Eliminar todas las imágenes no utilizadas:
+* docker image prune
+Eliminar todas las imágenes:
+* docker rmi $(docker images -q)
+
+12. Eliminar todo (contenedores, imágenes, volúmenes y redes no utilizadas)
+Eliminar todos los contenedores, imágenes y volúmenes:
+* docker system prune -a --volumes
+
+Comandos para Gestionar Puertos
+13. Verificar qué servicios están escuchando en un puerto específico (Linux)
+* sudo netstat -tuln | grep <puerto>
+Usar lsof:
+* sudo lsof -i:<puerto>
+Usar ss:
+* sudo ss -tuln | grep <puerto
+
+14. Ver todos los puertos abiertos y servicios en escucha
+Usar netstat:
+* sudo netstat -tuln
+Usar ss:
+* sudo ss -tuln
 
