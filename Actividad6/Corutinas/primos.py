@@ -1,3 +1,4 @@
+#yield retorna de la función a donde fue llamada, pero si es vuelta a llamar continúa su ejecución inmediatamente después del yield
 def is_prime(num):
     """
     Función auxiliar para verificar si un número es primo.
