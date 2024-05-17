@@ -26,12 +26,15 @@ def download_image(url, filename):
     except Exception as e:
         print(f"No se pudo descargar {filename}. Error: {str(e)}")
 
+# Crear una carpeta para guardar las imágenes descargadas
 folder = "downloaded_images"
 os.makedirs(folder, exist_ok=True)
 
+# Usar ThreadPoolExecutor para descargar múltiples imágenes en paralelo
 with ThreadPoolExecutor(max_workers=5) as executor:
     for url in image_urls:
         filename = os.path.join(folder, url.split('/')[-1])
+        # Enviar la tarea de descarga al pool de hilos
         executor.submit(download_image, url, filename)
 
 print("Todas las descargas han sido completadas.")
