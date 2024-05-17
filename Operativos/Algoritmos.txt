@@ -2,14 +2,31 @@ PROCESOS DE PLANIFICACIÓN
 1. Simulación Básica con FIFO
 Ejecuta una simulación con tres trabajos A, B y C, donde A dura 10 unidades de tiempo, B dura 5 unidades de tiempo y C dura 2 unidades de tiempo, todos llegando al mismo tiempo.
 * python3 process-run.py -l 10:100,5:100,2:100 --policy FIFO -c -p
+Explicación:
+Este comando simula una planificación First-In-First-Out (FIFO) con tres trabajos A, B y C. Cada trabajo tiene las siguientes duraciones:
+    - A dura 10 unidades de tiempo.
+    - B dura 5 unidades de tiempo.
+    - C dura 2 unidades de tiempo.
+La política FIFO ejecuta los procesos en el orden en que llegan.
 
 2. Simulación Básica con SJF
 Pregunta: Ejecuta una simulación con tres trabajos A, B y C, donde A dura 10 unidades de tiempo, B dura 5 unidades de tiempo y C dura 2 unidades de tiempo, todos llegando al mismo tiempo.
 * python3 process-run.py -l 10:100,5:100,2:100 --policy SJF -c -p
+Explicación:
+Este comando simula una planificación Shortest Job First (SJF) con tres trabajos A, B y C. Cada trabajo tiene las siguientes duraciones:
+    - A dura 10 unidades de tiempo.
+    - B dura 5 unidades de tiempo.
+    - C dura 2 unidades de tiempo.
+La política SJF ejecuta primero el proceso con la duración más corta.
 
 3. Simulación Básica con STCF
 Simula un escenario donde A realiza una E/S cada 10 unidades de tiempo y dura 50 unidades de tiempo en total, mientras que B simplemente usa la CPU durante 50 unidades de tiempo.
 * python3 process-run.py -l 5:20,50:100 --policy STCF -c -p
+Explicación:
+Este comando simula una planificación Shortest Time-to-Completion First (STCF) con dos trabajos A y B. Cada trabajo tiene las siguientes características:
+    - A realiza una E/S cada 10 unidades de tiempo y dura 50 unidades de tiempo en total.
+    - B simplemente usa la CPU durante 50 unidades de tiempo.
+La política STCF elige siempre el proceso que terminará más rápido.
 
 4. Quantum Variado con RR
 Simula un escenario donde A, B y C duran 10 unidades de tiempo cada uno, probando diferentes valores de quantum (1, 2 y 5 unidades de tiempo).
@@ -17,13 +34,31 @@ Comando con quantum de 1,2,5 unidad de tiempo:
 * python3 process-run.py -l 10:100,10:100,10:100 --policy RR --quantum 1 -c -p
 * python3 process-run.py -l 10:100,10:100,10:100 --policy RR --quantum 2 -c -p
 * python3 process-run.py -l 10:100,10:100,10:100 --policy RR --quantum 5 -c -p
+Explicación:
+Estos comandos simulan una planificación Round Robin (RR) con tres trabajos A, B y C. Cada trabajo dura 10 unidades de tiempo. La simulación se ejecuta con diferentes valores de quantum (1, 2 y 5 unidades de tiempo).
+La política RR distribuye el tiempo de CPU equitativamente entre los procesos, utilizando el valor de quantum para determinar cuánto tiempo ejecuta cada proceso antes de pasar al siguiente.
 
 5. Simulación con SQMS
 Pregunta: Ejecuta una simulación con cinco trabajos A, B, C, D y E en un sistema con 4 CPUs, utilizando una cola única.
 * python3 process-run.py -l 10:100,5:100,7:100,3:100,2:100 --policy SQMS -c -p
+Explicación:
+Este comando simula una planificación Single Queue Multi-Server (SQMS) con cinco trabajos A, B, C, D y E en un sistema con 4 CPUs. Cada trabajo tiene las siguientes duraciones:
+    - A dura 10 unidades de tiempo.
+    - B dura 5 unidades de tiempo.
+    - C dura 7 unidades de tiempo.
+    - D dura 3 unidades de tiempo.
+    - E dura 2 unidades de tiempo.
+La política SQMS utiliza una cola única para todos los procesos y distribuye el trabajo entre las CPUs disponibles.
 
 6. Simulación con MQMS
-
 Pregunta: Ejecuta una simulación similar a la anterior pero utilizando múltiples colas, una por CPU.
 * python3 process-run.py -l 10:100,5:100,7:100,3:100,2:100 --policy MQMS -c -p
 
+Explicación:
+Este comando simula una planificación Multiple Queue Multi-Server (MQMS) con cinco trabajos A, B, C, D y E en un sistema con 4 CPUs. Cada trabajo tiene las siguientes duraciones:
+    - A dura 10 unidades de tiempo.
+    - B dura 5 unidades de tiempo.
+    - C dura 7 unidades de tiempo.
+    - D dura 3 unidades de tiempo.
+    - E dura 2 unidades de tiempo.
+La política MQMS utiliza múltiples colas, una por CPU, para distribuir el trabajo.
