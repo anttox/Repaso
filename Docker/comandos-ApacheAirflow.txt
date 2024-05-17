@@ -1,0 +1,19 @@
+Comandos de Apache Airflow
+Apache Airflow se utiliza para orquestar y programar flujos de trabajo de datos complejos. A continuación, algunos comandos básicos:
+1. Iniciar el entorno de Airflow
+Primero, necesitas iniciar los servicios de Airflow.
+* airflow initdb
+* airflow webserver -p 8080
+* airflow scheduler
+
+2. Crear un DAG
+Un DAG (Directed Acyclic Graph) se define en un archivo Python.
+
+3. Ejecutar un DAG
+Puedes ejecutar un DAG manualmente desde la línea de comandos.
+* airflow dags trigger example_dag
+
+4. Monitorear y gestionar tareas
+Puedes usar la interfaz web de Airflow para monitorear y gestionar tus DAGs y tareas.
+* http://localhost:8080
+
