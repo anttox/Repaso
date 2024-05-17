@@ -1,0 +1,25 @@
+Conceptos Clave
+Paralelismo:
+- Se refiere a la ejecución simultánea de múltiples tareas.
+- Utiliza múltiples núcleos de CPU para ejecutar tareas al mismo tiempo.
+- Beneficioso en sistemas con múltiples procesadores o núcleos.
+
+Concurrencia:
+- Se refiere a la gestión de múltiples tareas al mismo tiempo.
+- No necesariamente implica ejecución simultánea.
+- Utiliza técnicas como el interleaving para compartir tiempo de CPU entre tareas.
+
+Importancia de Threading en Paralelismo y Concurrencia
+- Eficiencia en el uso del CPU:
+- Threading permite que una aplicación utilice eficientemente los recursos de CPU, ejecutando múltiples tareas en paralelo.
+- En sistemas con múltiples núcleos, puede mejorar significativamente el rendimiento.
+
+Mejorar el rendimiento de aplicaciones I/O-bound:
+- Las aplicaciones que dependen de operaciones de entrada/salida (lectura/escritura de archivos, operaciones de red) pueden beneficiarse enormemente de threading.
+- Los hilos pueden continuar ejecutándose mientras una operación I/O está esperando, mejorando el rendimiento general.
+
+Respuesta rápida en aplicaciones interactivas:
+- En aplicaciones de usuario, como interfaces gráficas, threading permite que la interfaz permanezca receptiva mientras se realizan operaciones en segundo plano.
+
+Distribuir tareas pesadas:
+- Las tareas que requieren mucho tiempo de CPU pueden dividirse en sub-tareas y ejecutarse en paralelo utilizando hilos, reduciendo el tiempo total de ejecución.-
