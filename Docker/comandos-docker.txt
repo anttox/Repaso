@@ -52,6 +52,13 @@ Eliminar todas las imágenes:
 Eliminar todos los contenedores, imágenes y volúmenes:
 * docker system prune -a --volumes
 
+EXTRA:
+Todos los comandos de Docker se pueden encontrar ejecutando el siguiente comando de ayuda:
+* docker help
+Para ver todas las opciones de cualquier comando de Docker en particular, podemos usar la ayuda de
+docker help <comando>, como en el siguiente ejemplo:
+* docker help run
+
 Comandos para Gestionar Puertos
 13. Verificar qué servicios están escuchando en un puerto específico (Linux)
 * sudo netstat -tuln | grep <puerto>
