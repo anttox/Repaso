@@ -1,0 +1,13 @@
+Componentes básicos de un Dockerfile
+Aquí algunos de los comandos más comunes utilizados en Dockerfiles:
+- FROM: Establece la imagen base para las instrucciones siguientes. Por ejemplo, FROM
+ubuntu:20.04 comienza la construcción utilizando la imagen base de Ubuntu 20.04.
+- RUN: Ejecuta comandos en una nueva capa encima de la imagen actual y la usa para la siguiente
+instrucción en el Dockerfile. Por ejemplo, RUN apt-get update && apt-get install -y git.
+- CMD: Proporciona comandos por defecto para la ejecución de un contenedor. Solo puede existir
+un CMD; si se especifican varios, solo el último surtirá efecto.
+- EXPOSE: Indica los puertos en los que un contenedor escuchará conexiones. Por ejemplo,
+EXPOSE 80 sugiere que el contenedor estará escuchando en el puerto 80.
+- ENV: Establece variables de entorno dentro del contenedor. Por ejemplo, ENV LANG C.UTF-8.
+- COPY y ADD: Copian archivos y directorios desde el sistema de archivos local al contenedor.
+- ENTRYPOINT: Permite configurar un contenedor que se ejecutará como un ejecutable.
