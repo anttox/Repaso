@@ -1,3 +1,4 @@
+```Dockerfile
 # Utiliza la imagen base de OpenJDK que tiene Java instalado
 FROM openjdk:8-jdk
 # Versión de Hadoop a instalar
@@ -22,3 +23,4 @@ EXPOSE 9870 9864
 # Configura el punto de entrada para iniciar los servicios de Hadoop y mantener el contenedor en ejecución
 ENTRYPOINT ["/opt/hadoop/bin/hadoop"]
 CMD ["namenode"]
+```
