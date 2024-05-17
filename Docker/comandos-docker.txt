@@ -1,0 +1,35 @@
+Creación de una Imagen de Docker (Paso a Paso)
+1. Creación de Dockerfile
+El Dockerfile es el archivo donde se definen las instrucciones para construir una imagen de Docker. Comienza creando un archivo de texto llamado "Dockerfile" en tu directorio de proyecto.
+
+2. Definir dependencias
+En el Dockerfile, se especifican las dependencias necesarias para tu aplicación.
+
+3. Copiar código de aplicación
+Se usa la instrucción COPY para copiar archivos y directorios a la imagen de Docker.
+
+4. Configuración de ajustes
+Se configuran las variables de entorno usando la instrucción ENV.
+
+5. Exponer puertos (si es necesario)
+La instrucción EXPOSE se utiliza para indicar qué puertos serán accesibles desde el contenedor.
+
+6. Definir Comando de inicio
+Se usa CMD o ENTRYPOINT para definir el comando que se ejecutará cuando el contenedor comience.
+
+7. Construir la imagen de Docker
+El comando docker build se usa para construir la imagen a partir del Dockerfile.
+* docker build -t mi-app-imagen:1.0 .
+* "-t" etiqueta la imagen con un nombre y una versión.
+* "." indica el directorio actual como contexto de construcción.
+
+8. Probar la Imagen
+El comando docker run se usa para ejecutar un contenedor basado en la imagen creada.
+* docker run -it mi-app-imagen:1.0
+* "-it" permite la interacción con el contenedor.
+
+9. Push la Imagen (Opcional)
+El comando docker push se usa para subir la imagen a un registro de contenedores.
+* docker push mi-usuario/mi-app-imagen:1.0
+
+
