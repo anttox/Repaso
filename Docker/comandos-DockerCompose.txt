@@ -1,0 +1,17 @@
+Comandos de Docker Compose
+1. Definiciones de servicio en "docker-compose.yml"
+Un archivo "docker-compose.yml" define los servicios que componen tu aplicación.
+
+2. Lanzamiento de la aplicación
+El comando docker-compose up construye e inicia los contenedores definidos en "docker-compose.yml".
+* docker-compose up
+
+3. Detener y eliminar los contenedores
+El comando docker-compose down detiene y elimina los contenedores y redes creados por docker-compose up.
+* docker-compose down
+
+4. Escalado de servicios
+El comando docker-compose scale se usa para escalar los servicios.
+* docker-compose up --scale web=3
+
+
