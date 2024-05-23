@@ -1,4 +1,4 @@
-Importante crear tambien tu repositorio de trbajo en linux con la terminal
+Importante crear tambien tu repositorio de trabajo en linux con la terminal
 1. Crear repositorio en github
 2. Generar token-clave Perfil -> Settings -> Developer Settings -> Personal Access Token -> Tokens classic (paso importante para poder hacer push)
 3. Poner los archivos que subiremos a nuestro repo en un repo del terminal de linux
